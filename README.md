@@ -92,7 +92,7 @@ The message is in the sound, not the picture. In a spectrogram the audio spells:
 
 That was a position on campus. A QR code was there, and scanning it opened the winners page.
 
-**Files:** `level-5/videoplayback.mp4`, unedited audio track.
+**Files:** `level-5/videoplayback.mp4`.
 
 ## KIFADA AI and the oath
 
