@@ -1,0 +1,58 @@
+:root { color-scheme: dark; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #05080b;
+  color: #7dffa8;
+  font-family: "Courier New", ui-monospace, Menlo, Consolas, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* subtle CRT scanlines */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.015) 0 1px,
+    transparent 1px 3px
+  );
+  pointer-events: none;
+}
+
+.terminal {
+  max-width: 46rem;
+  padding: 2rem;
+  line-height: 1.9;
+}
+
+.err {
+  color: #ff4d4d;
+  font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.past {
+  margin-top: 1.1rem;
+  color: #7dffa8;
+  font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+  opacity: 0.92;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  margin-left: 0.15em;
+  background: #7dffa8;
+  vertical-align: text-bottom;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }

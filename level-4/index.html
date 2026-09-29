@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style>
+:root {
+  --bg: #04070a;
+  --ink: #7fb596;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  min-height: 100vh;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 26px;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 14px rgba(127, 181, 150, 0.25));
+}
+.hint {
+  font-style: italic;
+  font-size: 15px;
+  color: #a8e0c0;
+  letter-spacing: 0.16em;
+  margin: 0 0 34px;
+  text-align: center;
+  animation: breathe 2.8s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.82; text-shadow: 0 0 8px rgba(168, 224, 192, 0.30); }
+  50%      { opacity: 1.00; text-shadow: 0 0 20px rgba(168, 224, 192, 0.70); }
+}
+.essay {
+  margin: 0;
+  padding: 28px 32px;
+  width: 100%;
+  overflow-x: auto;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: rgba(127, 181, 150, 0.035);
+  border: 1px solid rgba(127, 181, 150, 0.14);
+  box-shadow: 0 0 24px rgba(127, 181, 150, 0.06) inset;
+  white-space: pre;
+}
+.essay::after {
+  content: "\258A";
+  margin-left: 2px;
+  animation: blink 1.1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .essay::after { animation: none; opacity: 0.6; }
+  .hint { animation: none; opacity: 1; }
+}
+@media (max-width: 640px) {
+  .essay { font-size: 12px; padding: 18px 14px; }
+  .logo { width: 110px; }
+}
+</style>
+</head>
+<body>
+<!-- 5:2 1:4 1:8 5:5 1:3 1:9 3:7 4:2 3:4 2:2 2:5 7:8 4:6 1:2 7:10 1:7 5:6 4:1 6:9 2:1 2:6 4:10 1:6 3:1 3:3 9:2 4:8 7:6 7:2 5:8 8:1 8:3 3:6 6:7 10:1 3:8 -->
+<div class="wrap">
+<img class="logo" src="logo.jpg" alt="">
+<em class="hint">the key lies in the html</em>
+<pre class="essay">Abstract: a tuber is a bluff body of modest aerodynamic merit, launched with intent and little else.
+kinetics: lift and drag dominate the regime from the very first instant of release.
+drag 6/7, viscous skin friction the remainder of the tuber's resistance.
+m/s bulk flow rates rarely exceed a few tens of metres per second.
+the potato's mass distribution is starchy, heterogeneous, and profoundly unhelpful to stable flight.
+gust, 3m/s: factor gusts into every estimate of the trajectory's spread.
+of flight. A spin adds Magnus curvature to an already crooked path.
+drag coef of 0.5 marks the tuber as a quintessential bluff body.
+1/4 lift up is enough to bend the fall but never to save it.
+6/7 the way to stall, the potato still refuses to behave.
+The ubiquitous eyes and lenticels act as discrete roughness elements that trip the laminar boundary layer at Reynolds numbers far subcritical of the smooth-sphere threshold, precipitating an early, azimuthally non-uniform transition to turbulence.
+The resultant transition-front non-uniformity produces an asymmetric surface-pressure distribution over the windward hemisphere, generating a stochastic yawing moment whose sign and magnitude are irreproducible across successive throws — an ergodic nightmare for the experimentalist and a boon to the gambler.
+§3. Drag Decomposition and the Structure of the Wake.
+By dint of its bluff geometry, the potato's aerodynamic resistance budget is dominated by pressure (form) drag, which accounts for no less than 85–95% of the total drag; viscous skin-friction contributions constitute but a paltry remainder.
+Flow separation occurs at an azimuthal station situated far upstream of the rear stagnation point, a consequence of the severe adverse pressure gradient imposed by the tuber's abrupt meridional curvature.
+Downstream of separation, a broad, intensely turbulent recirculatory wake is established, entraining irrotational freestream fluid through a shear-layer instability of the Kelvin–Helmholtz type, accompanied by periodic vortex roll-up.
+The wake's momentum deficit depresses the base pressure coefficient to values of approximately C_p,b ≈ −0.4 to −0.6, and it is this base-suction deficit that constitutes the dominant contributor to the aggregate drag coefficient, C_D ≈ 0.45–0.65.
+The drag coefficient is itself a stochastic variate, fluctuating with the instantaneous orientation of the tuber relative to the freestream, the ambient turbulence intensity, the soil-moisture-dependent mass distribution, and the cultivar-specific surface chemistry.
+§4. Vortex Shedding and the Unsteady Signature.
+The separated shear layers roll up into alternating, counter-rotating spanwise vortex filaments, self-organizing into a von Kármán vortex street characterized by a Strouhal number St = fD/U ≈ 0.18–0.22.
+The attendant vortex-shedding frequency, f ≈ 20–50 Hz for a thrown tuber, subjects the projectile to transverse oscillatory aerodynamic loads that induce a measurable meander of the flight path — a phenomenon the lay observer, in his ignorance, misattributes to defective aim.
+Were the potato a slender, elastic structure, such excitation would portend catastrophic aeroelastic resonance; mercifully, the tuber's elevated structural stiffness and internal damping preclude flutter, while its starch–water viscoelastic matrix dissipates high-frequency perturbations with admirable complaisance.
+§5. Rotational Dynamics, the Magnus Effect, and Trajectory Curvature.
+A tumbling potato executes compound rotation about its principal axes, and the circulation engendered by spin interacts with the relative wind to produce a Magnus force orthogonal to both the spin vector and the instantaneous velocity vector.
+In accordance with the Kutta–Joukowski theorem, the lift coefficient scales as C_L ∝ Γ/(UD), where Γ denotes the bound circulation; for a potato, however, the irregular integument aborts the formation of any coherent bound vortex, yielding a profoundly degraded and hysteretic lift response.
+The spin additionally confers gyroscopic rigidity, endowing the flight with resistance to overturning moments — a stability that is, however, systematically undermined by the precession and nutation arising from non-principal-axis rotation.
+The resulting trajectory is a manifestly non-parabolic, six-degree-of-freedom spatial locus replete with curvature, lateral meander, and unsteady drift, defying the exterior-ballistician's cherished assumption of planar, point-mass, constant-coefficient flight.
+§6. Ballistic Parameters and the Terminal Velocity.
+The potato's ballistic coefficient, β = m/(C_D A), wherein m denotes mass and A the projected frontal area, is conspicuously inferior to that of streamlined ordnance, reflecting its abysmal sectional-density-to-drag ratio.
+A tuber released from altitude rapidly asymptotes to its terminal velocity, v_t = √(2mg/(ρC_D A)) ≈ 55–70 m·s⁻¹, a magnitude sufficient to render the colloquial assertion "it's the fall that kills you" aerodynamically moot — the tuber's modest terminal velocity conspicuously mitigates impact lethality.
+The internal mass distribution is further complicated by hydrothermal gradients and starch heterogeneity, producing an eccentric center of mass that induces a persistent, gravity-aligned pitching moment throughout the descent phase.
+§7. Computational and Experimental Considerations.
+High-fidelity numerical treatment demands large-eddy simulation with wall-adaptive subgrid-scale closure, yet the potato's geometric irregularity necessitates immersed-boundary or overset-grid methodologies that wholly obviate the expediency of body-fitted meshing.
+Computational expense is further exacerbated by the imperative of resolving the Kolmogorov microscale, η ≈ (ν³/ε)^(1/4), within the near-wall region, where ε denotes the turbulent kinetic-energy dissipation rate and ν the kinematic viscosity.
+Experimental wind-tunnel campaigns are equally fraught: the specimen must be sting-mounted, yet its low structural rigidity promotes vibration contamination of the six-component force balance, while blockage-ratio corrections prove unreliable given the model's eccentric, non-axisymmetric silhouette.
+Free-flight optical tracking via high-speed videogrammetry offers the most veridical data, albeit at the price of irreproducible initial conditions — the release kinematics of the human thrower stubbornly defy deterministic specification.
+§8. Anthropometric and Ergodic Considerations of the Launch.
+The prehensile launch constitutes a multi-articular kinematic chain — hip, shoulder, elbow, wrist — whose coordinated, proprioceptively regulated extension imparts both linear and angular momentum to the tuber in proportions governed by the thrower's neuromuscular feedback loops.
+Optimal release conditions, as predicted by a Monte Carlo sensitivity analysis over the launch-angle and release-speed phase space, yield a maximal range of R_max ≈ 45–60 m for a nominal cultivar under quiescent atmospheric conditions.
+The optimality landscape is, however, a shallow plateau, and the stochastic yawing moment of §2 dominates the dispersion of impact points, rendering the potato's range distribution closer to a Gaussian scatter than to a deterministic ballistic locus.
+§9. On the Apparent Paradox of Aerodynamic Inferiority and Functional Sufficiency.
+One might legitimately inquire why a projectile so aerodynamically execrable persists in human athletic, culinary, and martial usage; the resolution resides in the multi-objective nature of the design space.
+The potato is not optimized for lift-to-drag ratio, but for calorific yield, gustatory acceptability, agronomic robustness, and — critically — edibility upon impact, a constraint set to which no airfoil has ever aspired.
+On the Pareto-optimal frontier spanning {aerodynamic merit, culinary utility, tuber yield}, the potato occupies an extreme locus that, while aerodynamically degenerate, is evolutionarily and gastronomically supreme.
+§10. Concluding Remarks.
+The aerodynamics of the potato constitute a sobering reminder that nature's geometries remain profoundly indifferent to the aerodynamicist's aesthetic preference for streamline conformity.
+The tuber's flight is governed by a confluence of transitional boundary-layer physics, stochastic separation, coherent vortex shedding, and gyroscopically compromised rotational dynamics that collectively render deterministic prediction an exercise in intellectual humility.
+Future work should embrace uncertainty quantification, stochastic aerodynamic surrogate modeling, and the development of a potato-specific drag polar; the author nonetheless concedes that the practical utility of such an endeavor remains, at best, debatable.
+Acknowledgments — The author extends gratitude to the garden, the soil, the venerable tradition of idle inquiry, and the Irish famine (which secured the tuber's historical eminence) for making this study possible.
+References — Legg, B. J., Long, I. F., &amp; Zemroch, P. J. (1981). Aerodynamic properties of field bean and potato crops. Agricultural Meteorology, 23(1).
+References — (2019). Aerodynamic properties of potato tubers to airflow separation from stones and clods. International Journal of Vegetable Science, 25(1).
+References — Prandtl, L. (1904). Über Flüssigkeitsbewegung bei sehr kleiner Reibung. — cited here, as is tradition, for the sheer gravitas it confers upon any fluid-mechanical manuscript.</pre>
+</div>
+<script>
+document.addEventListener('copy', function (e) {
+  e.clipboardData.setData('text/plain', "ops, u can't copy this");
+  e.preventDefault();
+});
+document.addEventListener('cut', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>
