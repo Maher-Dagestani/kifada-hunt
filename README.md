@@ -110,14 +110,4 @@ Not in this repository — the chat and oath pages live in their own repos.
 
 ![The winners page](docs/winners.jpg)
 
-The QR code opened a page with one instruction: open WhatsApp and send the exact text **I am the best hacker at kfupm**. That message's timestamp was the finish time and how teams were ranked. One message per team; sent once.
-
-The page ends with this line:
-
-> we never said this is the end, see you later - kifada
-
-**Files:** `winners/index.html`.
-
-## Other files
-
-`_shared/gate.js`, `_shared/robots.txt`, `_shared/_headers` — identical across the level sites, so kept once. `gate.js` is a Netlify edge function: it returns 403 to AI crawler user agents, rate-limits per IP, and lets `robots.txt` through. There is no password gate; one was built and removed before the event.
+ is a Netlify edge function: it returns 403 to AI crawler user agents, rate-limits per IP, and lets `robots.txt` through. There is no password gate; one was built and removed before the event.
