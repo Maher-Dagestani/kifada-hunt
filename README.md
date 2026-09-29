@@ -109,5 +109,3 @@ Not in this repository — the chat and oath pages live in their own repos.
 ## Winners
 
 ![The winners page](docs/winners.jpg)
-
- is a Netlify edge function: it returns 403 to AI crawler user agents, rate-limits per IP, and lets `robots.txt` through. There is no password gate; one was built and removed before the event.
