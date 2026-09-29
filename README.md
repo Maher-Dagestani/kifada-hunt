@@ -47,11 +47,12 @@ Caesar shift of 4 on the letters:
 
 **Files:** `level-2/` is the deleted-site page; `level-2/caesar-cipher/` is the cipher page.
 
-## Level 3 — the silent page
+## Level 3 — stg
 
 ![Level 3 — the silent page](docs/level-3-silent-page.jpg)
 
-The page holds a single tag, `kifada/stg`, and one image: `empty.png`. The file is named empty and weighs 1.02 MB — a black-and-white photo of the campus water tower with the moth over it. It is 1080 × 1350 with nothing appended after the last chunk.
+The page holds a single tag, `kifada/stg`, and one image: `empty.png`. The file is named empty and weighs 1.02 MB — a black-and-white photo of the campus tower with the moth over it. It is 1080 × 1350 with nothing appended after the last chunk.
+the image contains the link hidden inside
 
 **Files:** `level-3/index.html`, `level-3/empty.png`.
 
